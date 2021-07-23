@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import List from './components/List';
 interface IState {
   friend:{
     name: string
@@ -9,14 +10,20 @@ interface IState {
   } []
 }
 function App() {
-  const [friend, setFriend] = useState<IState["friend"]>([]);
+  const [friend, setFriend] = useState<IState["friend"]>([
+    {
+      name: "nayemul",
+      age: 23,
+      url: "",
+      note: "hello nayemul"
+    }
+  ]);
 
-  const changeNumber  = ()=>{
-    setNumber(10);
-  }
+
   return (
     <div className="App">
       <h1>Welcome my list</h1>
+      <List friend={friend} />
     </div>
   );
 }
