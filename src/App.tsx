@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import AddToFriend from './components/AddToFriend';
 import List from './components/List';
 interface IState {
   friend:{
@@ -24,6 +25,7 @@ function App() {
     <div className="App">
       <h1>Welcome my list</h1>
       <List friend={friend} />
+      <AddToFriend />
     </div>
   );
 }
