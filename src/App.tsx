@@ -14,7 +14,7 @@ function App() {
     {
       name: "nayemul",
       age: 23,
-      url: "",
+      url: "https://i.pinimg.com/280x280_RS/87/ea/12/87ea12420483def3924072790c96a06d.jpg",
       note: "hello nayemul"
     }
   ]);

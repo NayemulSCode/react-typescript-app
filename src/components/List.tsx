@@ -8,10 +8,24 @@ interface IProps {
     } []
   }
 const List: React.FC<IProps> = ({friend}) => {
+    const renderList =():JSX.Element[] =>{
+        return friend.map((person) =>{
+            return(
+                <li className="List">
+                    <div className="List-header">
+                        <img className="List-img" src={person.url} alt="" />
+                        <h2>{person.name}</h2>
+                    </div>
+                    <p>{person.age}</p>
+                    <p className="List-note">{person.note}</p>
+                </li>
+            )
+        })
+    }
     return (
-        <div>
-            <h3>hello</h3>
-        </div>
+        <ul>
+            {renderList()}
+        </ul>
     )
 }
 
