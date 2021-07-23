@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
-
+interface IState {
+  friend:{
+    name: string
+    age: number
+    url: string
+    note?: string
+  } []
+}
 function App() {
-  const [number, setNumber] = useState(5);
+  const [friend, setFriend] = useState<IState["friend"]>([]);
 
   const changeNumber  = ()=>{
     setNumber(10);
