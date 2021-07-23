@@ -1,12 +1,6 @@
 import React from 'react'
-interface IProps {
-    friend:{
-      name: string
-      age: number
-      url: string
-      note?: string
-    } []
-  }
+import { IState as IProps } from '../App'
+
 const List: React.FC<IProps> = ({friend}) => {
     const renderList =():JSX.Element[] =>{
         return friend.map((person, index) =>{

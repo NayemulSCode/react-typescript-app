@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import AddToFriend from './components/AddToFriend';
 import List from './components/List';
-interface IState {
+export interface IState {
   friend:{
     name: string
     age: number
@@ -11,7 +11,7 @@ interface IState {
   } []
 }
 function App() {
-  const [friend, setFriend] = useState<IState["friend"]>([
+  const [friends, setFriends] = useState<IState["friend"]>([
     {
       name: "nayemul",
       age: 23,
@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome my list</h1>
-      <List friend={friend} />
-      <AddToFriend />
+      <List friend={friends} />
+      <AddToFriend friends={friends} setFriends = {setFriends} />
     </div>
   );
 }
